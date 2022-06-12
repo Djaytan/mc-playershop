@@ -1,5 +1,5 @@
 name: ${name}
 version: ${version}
-author: Voltariuss
+author: Djaytan
 api-version: ${minecraft.api.version}
 main: ${package.root}.plugin.DiagoniaPlayerShopPlugin
