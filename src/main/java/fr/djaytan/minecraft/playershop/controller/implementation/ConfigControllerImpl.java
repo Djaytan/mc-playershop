@@ -19,9 +19,9 @@
 package fr.djaytan.minecraft.playershop.controller.implementation;
 
 import com.google.common.base.Preconditions;
-import fr.djaytan.minecraft.playershop.model.config.ConfigFile;
 import fr.djaytan.minecraft.playershop.PlayerShopRuntimeException;
 import fr.djaytan.minecraft.playershop.controller.api.ConfigController;
+import fr.djaytan.minecraft.playershop.model.config.ConfigFile;
 import fr.djaytan.minecraft.playershop.model.config.data.PluginConfig;
 import fr.djaytan.minecraft.playershop.model.config.serializers.PlayerShopConfigSerializers;
 import java.io.IOException;
@@ -41,14 +41,14 @@ import org.spongepowered.configurate.hocon.HoconConfigurationLoader;
 public class ConfigControllerImpl implements ConfigController {
 
   private final Path dataFolder;
-  private final PlayerShopConfigSerializers diagoniaConfigSerializers;
+  private final PlayerShopConfigSerializers playerShopConfigSerializers;
   private final Plugin plugin;
 
   @Inject
   public ConfigControllerImpl(
-      @NotNull PlayerShopConfigSerializers diagoniaConfigSerializers, @NotNull Plugin plugin) {
+      @NotNull PlayerShopConfigSerializers playerShopConfigSerializers, @NotNull Plugin plugin) {
     this.dataFolder = plugin.getDataFolder().toPath();
-    this.diagoniaConfigSerializers = diagoniaConfigSerializers;
+    this.playerShopConfigSerializers = playerShopConfigSerializers;
     this.plugin = plugin;
   }
 
@@ -64,7 +64,7 @@ public class ConfigControllerImpl implements ConfigController {
             .defaultOptions(
                 configurationOptions ->
                     configurationOptions.serializers(
-                        builder -> builder.registerAll(diagoniaConfigSerializers.collection())))
+                        builder -> builder.registerAll(playerShopConfigSerializers.collection())))
             .path(dataFolder.resolve(configFileName))
             .build();
 
@@ -108,8 +108,8 @@ public class ConfigControllerImpl implements ConfigController {
       }
     }
 
-    for (ConfigFile diagoniaConfig : ConfigFile.values()) {
-      String configFileName = diagoniaConfig.getName();
+    for (ConfigFile configFile : ConfigFile.values()) {
+      String configFileName = configFile.getName();
       Path configFilePath = dataFolder.resolve(configFileName);
 
       if (Files.exists(configFilePath)) {

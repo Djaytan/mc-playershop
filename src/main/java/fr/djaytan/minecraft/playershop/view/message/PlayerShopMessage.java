@@ -50,7 +50,7 @@ public class PlayerShopMessage {
 
   public @NotNull Component buySuccess(@NotNull EconomyResponse economyResponse) {
     return miniMessage.deserialize(
-        resourceBundle.getString("diagonia.playershop.buy.success"),
+        resourceBundle.getString("playershop.playershop.buy.success"),
         TagResolver.resolver(
             Placeholder.unparsed(
                 "diag_price", economyFormatter.format(economyResponse.getModifiedAmount())),
@@ -60,13 +60,13 @@ public class PlayerShopMessage {
 
   public @NotNull Component teleportPointDefined(@NotNull LocationDto locationDto) {
     return miniMessage.deserialize(
-        resourceBundle.getString("diagonia.playershop.config.teleportation.defined"),
+        resourceBundle.getString("playershop.playershop.config.teleportation.defined"),
         TagResolver.resolver(
             Placeholder.component(
                 "diag_teleport_point",
                 miniMessage.deserialize(
                     resourceBundle.getString(
-                        "diagonia.playershop.config.teleportation.defined.location"),
+                        "playershop.playershop.config.teleportation.defined.location"),
                     TagResolver.resolver(
                         Placeholder.unparsed(
                             "diag_location_x", String.format("%.2f", locationDto.getX())),
@@ -83,38 +83,38 @@ public class PlayerShopMessage {
 
   public @NotNull Component toggleShop(boolean isPlayerShopActive) {
     return miniMessage.deserialize(
-        resourceBundle.getString("diagonia.playershop.config.activation.toggled"),
+        resourceBundle.getString("playershop.playershop.config.activation.toggled"),
         TagResolver.resolver(
             Placeholder.component(
                 "diag_activation_state",
                 miniMessage.deserialize(
                     resourceBundle.getString(
                         isPlayerShopActive
-                            ? "diagonia.playershop.config.activation.toggled.enabled"
-                            : "diagonia.playershop.config.activation.toggled.disabled")))));
+                            ? "playershop.playershop.config.activation.toggled.enabled"
+                            : "playershop.playershop.config.activation.toggled.disabled")))));
   }
 
   public @NotNull Component shopActivationRequireTeleportPointFirst() {
     return miniMessage.deserialize(
         resourceBundle.getString(
-            "diagonia.playershop.config.activation.enabling.fail.teleport_point_definition_required"));
+            "playershop.playershop.config.activation.enabling.fail.teleport_point_definition_required"));
   }
 
   public @NotNull Component insufficientFunds() {
     return miniMessage.deserialize(
-        resourceBundle.getString("diagonia.playershop.buy.fail.insufficient_funds"));
+        resourceBundle.getString("playershop.playershop.buy.fail.insufficient_funds"));
   }
 
   public @NotNull Component transactionFailed() {
     return miniMessage.deserialize(
-        resourceBundle.getString("diagonia.playershop.buy.fail.transaction_failed"));
+        resourceBundle.getString("playershop.playershop.buy.fail.transaction_failed"));
   }
 
   public @NotNull Component noPlayerShopForSpecifiedPlayer() {
     return miniMessage
         .deserialize(
             resourceBundle.getString(
-                "diagonia.playershop.teleportation.fail.no_playershop_for_specified_player"))
+                "playershop.playershop.teleportation.fail.no_playershop_for_specified_player"))
         .decoration(TextDecoration.ITALIC, false);
   }
 
@@ -122,26 +122,26 @@ public class PlayerShopMessage {
     return miniMessage
         .deserialize(
             resourceBundle.getString(
-                "diagonia.playershop.teleportation.fail.playershop_deactivated"))
+                "playershop.playershop.teleportation.fail.playershop_deactivated"))
         .decoration(TextDecoration.ITALIC, false);
   }
 
   public @NotNull Component noTeleportPointDefined() {
     return miniMessage.deserialize(
-        resourceBundle.getString("diagonia.playershop.teleportation.fail.no_tp_defined_error"));
+        resourceBundle.getString("playershop.playershop.teleportation.fail.no_tp_defined_error"));
   }
 
   public @NotNull Component tpCreationImpossibleInThisWorld() {
     return miniMessage
         .deserialize(
             resourceBundle.getString(
-                "diagonia.playershop.teleportation.fail.tp_creation_impossible_in_this_world"))
+                "playershop.playershop.teleportation.fail.tp_creation_impossible_in_this_world"))
         .decoration(TextDecoration.ITALIC, false);
   }
 
   public @NotNull Component successTeleport(@NotNull String ownerName) {
     return miniMessage.deserialize(
-        resourceBundle.getString("diagonia.playershop.teleportation.success"),
+        resourceBundle.getString("playershop.playershop.teleportation.success"),
         TagResolver.resolver(Placeholder.unparsed("diag_owner_name", ownerName)));
   }
 }

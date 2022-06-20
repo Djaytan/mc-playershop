@@ -45,7 +45,7 @@ public class CommonMessage {
 
   public @NotNull Component startupBanner() {
     return miniMessage.deserialize(
-        resourceBundle.getString("diagonia.common.message.startup.banner"),
+        resourceBundle.getString("playershop.common.message.startup.banner"),
         TagResolver.resolver(Placeholder.component("diag_indentation", STARTUP_BANNER_INDENT)));
   }
 
@@ -53,7 +53,7 @@ public class CommonMessage {
       @NotNull PluginDescriptionFile pluginDescriptionFile) {
     return STARTUP_BANNER_INDENT.append(
         miniMessage.deserialize(
-            resourceBundle.getString("diagonia.common.message.startup.current_version"),
+            resourceBundle.getString("playershop.common.message.startup.current_version"),
             TagResolver.resolver(
                 Placeholder.unparsed("diag_plugin_version", pluginDescriptionFile.getVersion()))));
   }
@@ -61,7 +61,7 @@ public class CommonMessage {
   public @NotNull Component startupBannerProgressionLine(@NotNull String text) {
     return STARTUP_BANNER_INDENT.append(
         miniMessage.deserialize(
-            resourceBundle.getString("diagonia.common.message.startup.progression_line.format"),
+            resourceBundle.getString("playershop.common.message.startup.progression_line.format"),
             TagResolver.resolver(Placeholder.unparsed("diag_progression_message", text))));
   }
 
@@ -69,7 +69,7 @@ public class CommonMessage {
       @NotNull String key, @NotNull String value) {
     return STARTUP_BANNER_INDENT.append(Component.text("  ")).append(
         miniMessage.deserialize(
-            resourceBundle.getString("diagonia.common.message.startup.state.format"),
+            resourceBundle.getString("playershop.common.message.startup.state.format"),
             TagResolver.resolver(
                 Placeholder.unparsed("diag_key", key), Placeholder.unparsed("diag_value", value))));
   }
@@ -77,25 +77,25 @@ public class CommonMessage {
   public @NotNull Component startupBannerEnablingSuccessLine() {
     return STARTUP_BANNER_INDENT.append(
         miniMessage.deserialize(
-            resourceBundle.getString("diagonia.common.message.startup.enabling_successfully")));
+            resourceBundle.getString("playershop.common.message.startup.enabling_successfully")));
   }
 
   public @NotNull Component startupBannerEnablingFailureLine() {
     return STARTUP_BANNER_INDENT.append(
         miniMessage.deserialize(
-            resourceBundle.getString("diagonia.common.message.startup.enabling_failed")));
+            resourceBundle.getString("playershop.common.message.startup.enabling_failed")));
   }
 
   public @NotNull Component unexpectedError() {
     return miniMessage
-        .deserialize(resourceBundle.getString("diagonia.common.fail.unexpected_error"))
+        .deserialize(resourceBundle.getString("playershop.common.fail.unexpected_error"))
         .decoration(TextDecoration.ITALIC, false);
   }
 
   public @NotNull Component playerNotFound(String playerName) {
     return miniMessage
         .deserialize(
-            resourceBundle.getString("diagonia.common.fail.player_not_found"),
+            resourceBundle.getString("playershop.common.fail.player_not_found"),
             TagResolver.resolver(Placeholder.unparsed("diag_player_name", playerName)))
         .decoration(TextDecoration.ITALIC, false);
   }

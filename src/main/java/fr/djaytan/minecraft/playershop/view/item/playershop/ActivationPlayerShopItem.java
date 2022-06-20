@@ -84,8 +84,8 @@ public class ActivationPlayerShopItem {
         .deserialize(
             resourceBundle.getString(
                 isPlayerShopActive
-                    ? "diagonia.playershop.config.activation.item.disabling.name"
-                    : "diagonia.playershop.config.activation.item.enabling.name"))
+                    ? "playershop.playershop.config.activation.item.disabling.name"
+                    : "playershop.playershop.config.activation.item.enabling.name"))
         .decoration(TextDecoration.ITALIC, false);
   }
 
@@ -95,8 +95,8 @@ public class ActivationPlayerShopItem {
             .deserialize(
                 resourceBundle.getString(
                     isPlayerShopActive
-                        ? "diagonia.playershop.config.activation.item.disabling.description"
-                        : "diagonia.playershop.config.activation.item.enabling.description"))
+                        ? "playershop.playershop.config.activation.item.disabling.description"
+                        : "playershop.playershop.config.activation.item.enabling.description"))
             .decoration(TextDecoration.ITALIC, false));
   }
 }

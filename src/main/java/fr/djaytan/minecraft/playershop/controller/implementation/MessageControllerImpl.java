@@ -98,13 +98,13 @@ public class MessageControllerImpl implements MessageController {
     // We don't simplify it to let IDE recognizes automatically used keys
     String messageFormatKey =
         switch (messageType) {
-          case INFO -> "diagonia.common.message.format.info";
-          case SUCCESS -> "diagonia.common.message.format.success";
-          case FAILURE -> "diagonia.common.message.format.failure";
-          case WARNING -> "diagonia.common.message.format.warning";
-          case ERROR -> "diagonia.common.message.format.error";
-          case BROADCAST -> "diagonia.common.message.format.broadcast";
-          case DEBUG -> "diagonia.common.message.format.debug";
+          case INFO -> "playershop.common.message.format.info";
+          case SUCCESS -> "playershop.common.message.format.success";
+          case FAILURE -> "playershop.common.message.format.failure";
+          case WARNING -> "playershop.common.message.format.warning";
+          case ERROR -> "playershop.common.message.format.error";
+          case BROADCAST -> "playershop.common.message.format.broadcast";
+          case DEBUG -> "playershop.common.message.format.debug";
         };
 
     return miniMessage

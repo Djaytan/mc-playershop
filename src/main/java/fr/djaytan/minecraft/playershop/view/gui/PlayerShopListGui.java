@@ -84,7 +84,7 @@ public class PlayerShopListGui {
         Gui.paginated()
             .title(
                 miniMessage.deserialize(
-                    resourceBundle.getString("diagonia.playershop.list.gui.title")))
+                    resourceBundle.getString("playershop.playershop.list.gui.title")))
             .rows(6)
             .pageSize(pageSize)
             .create();

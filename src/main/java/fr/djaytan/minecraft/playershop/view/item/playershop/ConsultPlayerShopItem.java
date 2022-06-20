@@ -94,7 +94,7 @@ public class ConsultPlayerShopItem {
   private @NotNull Component getName(@NotNull String ownerName) {
     return miniMessage
         .deserialize(
-            resourceBundle.getString("diagonia.playershop.list.shop.name"),
+            resourceBundle.getString("playershop.playershop.list.shop.name"),
             TagResolver.resolver(Placeholder.unparsed("diag_player_name", ownerName)))
         .decoration(TextDecoration.ITALIC, false);
   }

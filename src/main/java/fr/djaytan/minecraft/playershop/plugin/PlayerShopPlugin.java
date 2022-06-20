@@ -28,7 +28,7 @@ import fr.djaytan.minecraft.playershop.model.config.serializers.PlayerShopConfig
 import javax.inject.Inject;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class DiagoniaPlayerShopPlugin extends JavaPlugin {
+public class PlayerShopPlugin extends JavaPlugin {
 
   @Inject private PluginController pluginController;
 

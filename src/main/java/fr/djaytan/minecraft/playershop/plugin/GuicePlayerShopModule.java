@@ -111,7 +111,7 @@ public class GuicePlayerShopModule extends AbstractModule {
   @Provides
   @Singleton
   public @NotNull ResourceBundle provideResourceBundle() {
-    return ResourceBundle.getBundle("diagonia", Locale.FRANCE);
+    return ResourceBundle.getBundle("playershop", Locale.FRANCE);
   }
 
   @Provides

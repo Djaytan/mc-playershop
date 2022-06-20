@@ -64,7 +64,7 @@ public class PlayerShopConfigGui {
             .rows(3)
             .title(
                 miniMessage.deserialize(
-                    resourceBundle.getString("diagonia.playershop.config.gui.title")))
+                    resourceBundle.getString("playershop.playershop.config.gui.title")))
             .create();
 
     gui.setItem(2, 4, activationPlayerShopItem.createItem(playerShop));
@@ -76,7 +76,7 @@ public class PlayerShopConfigGui {
         ItemBuilder.from(PREVIOUS_GUI_MATERIAL)
             .name(
                 miniMessage
-                    .deserialize(resourceBundle.getString("diagonia.gui.go_to_previous_menu"))
+                    .deserialize(resourceBundle.getString("playershop.gui.go_to_previous_menu"))
                     .decoration(TextDecoration.ITALIC, false))
             .asGuiItem(
                 event ->

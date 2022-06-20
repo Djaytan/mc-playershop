@@ -73,7 +73,7 @@ public class DefineTpPlayerShopItem {
 
   private @NotNull Component getName() {
     return miniMessage
-        .deserialize(resourceBundle.getString("diagonia.playershop.config.teleportation.item.name"))
+        .deserialize(resourceBundle.getString("playershop.playershop.config.teleportation.item.name"))
         .decoration(TextDecoration.ITALIC, false);
   }
 
@@ -82,12 +82,12 @@ public class DefineTpPlayerShopItem {
         miniMessage
             .deserialize(
                 resourceBundle.getString(
-                    "diagonia.playershop.config.teleportation.item.description.1"))
+                    "playershop.playershop.config.teleportation.item.description.1"))
             .decoration(TextDecoration.ITALIC, false),
         miniMessage
             .deserialize(
                 resourceBundle.getString(
-                    "diagonia.playershop.config.teleportation.item.description.2"))
+                    "playershop.playershop.config.teleportation.item.description.2"))
             .decoration(TextDecoration.ITALIC, false));
   }
 }

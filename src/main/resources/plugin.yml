@@ -2,4 +2,4 @@ name: ${name}
 version: ${version}
 author: Djaytan
 api-version: ${minecraft.api.version}
-main: ${package.root}.plugin.DiagoniaPlayerShopPlugin
+main: ${package.root}.plugin.PlayerShopPlugin

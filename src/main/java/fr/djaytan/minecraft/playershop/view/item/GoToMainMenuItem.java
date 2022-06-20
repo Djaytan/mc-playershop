@@ -66,7 +66,7 @@ public class GoToMainMenuItem {
 
   private @NotNull Component getName() {
     return miniMessage
-        .deserialize(resourceBundle.getString("diagonia.gui.go_to_main_menu"))
+        .deserialize(resourceBundle.getString("playershop.gui.go_to_main_menu"))
         .decoration(TextDecoration.ITALIC, false);
   }
 }

@@ -66,14 +66,14 @@ public class ConfigPlayerShopItem {
 
   private @NotNull Component getName() {
     return miniMessage
-        .deserialize(resourceBundle.getString("diagonia.playershop.config.item.name"))
+        .deserialize(resourceBundle.getString("playershop.playershop.config.item.name"))
         .decoration(TextDecoration.ITALIC, false);
   }
 
   private @NotNull List<Component> getLore() {
     return Collections.singletonList(
         miniMessage
-            .deserialize(resourceBundle.getString("diagonia.playershop.config.item.description"))
+            .deserialize(resourceBundle.getString("playershop.playershop.config.item.description"))
             .decoration(TextDecoration.ITALIC, false));
   }
 }

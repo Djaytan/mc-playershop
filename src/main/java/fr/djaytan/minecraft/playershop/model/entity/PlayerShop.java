@@ -44,7 +44,7 @@ import org.bukkit.Material;
 import org.hibernate.annotations.NaturalId;
 
 @Entity
-@Table(name = "diagonia_ps_playershop")
+@Table(name = "playershop_ps_playershop")
 @ToString
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

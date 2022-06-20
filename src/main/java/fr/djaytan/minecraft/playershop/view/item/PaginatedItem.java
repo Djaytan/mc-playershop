@@ -47,7 +47,7 @@ public class PaginatedItem {
     return ItemBuilder.from(PAGE_ITEM)
         .name(
             miniMessage
-                .deserialize(resourceBundle.getString("diagonia.gui.page.previous"))
+                .deserialize(resourceBundle.getString("playershop.gui.page.previous"))
                 .decoration(TextDecoration.ITALIC, false))
         .asGuiItem(inventoryClickEvent -> guiHolder.previous());
   }
@@ -56,7 +56,7 @@ public class PaginatedItem {
     return ItemBuilder.from(PAGE_ITEM)
         .name(
             miniMessage
-                .deserialize(resourceBundle.getString("diagonia.gui.page.next"))
+                .deserialize(resourceBundle.getString("playershop.gui.page.next"))
                 .decoration(TextDecoration.ITALIC, false))
         .asGuiItem(inventoryClickEvent -> guiHolder.next());
   }
