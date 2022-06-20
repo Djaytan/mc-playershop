@@ -38,6 +38,6 @@
         <property name="hibernate.hbm2ddl.auto">create-drop</property>
         <property name="hibernate.hbm2ddl.charset_name">UTF-8</property>
 
-        <mapping class="fr.djaytan.diagonia.playershop.model.entity.PlayerShop" />
+        <mapping class="fr.djaytan.minecraft.playershop.model.entity.PlayerShop" />
     </session-factory>
 </hibernate-configuration>

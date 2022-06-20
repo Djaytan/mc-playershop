@@ -22,14 +22,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>fr.djaytan.diagonia</groupId>
-    <artifactId>diagonia-playershop</artifactId>
+    <groupId>fr.djaytan.minecraft</groupId>
+    <artifactId>mc-playershop</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Diagonia-PlayerShop</name>
-    <description>PlayerShop Bukkit plugin for Diagonia, a Minecraft server</description>
-    <url>https://www.diagonia.fr/</url>
+    <name>PlayerShop</name>
+    <description>PlayerShop plugin for Bukkit servers (Minecraft)</description>
 
     <licenses>
         <license>
@@ -49,7 +48,7 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
         <minecraft.api.version>1.18</minecraft.api.version>
-        <package.root>fr.djaytan.diagonia.playershop</package.root> <!-- Rename to Djaytan -->
+        <package.root>fr.djaytan.minecraft.playershop</package.root>
 
         <papermc.version>1.18.2-R0.1-SNAPSHOT</papermc.version>
         <acf.version>0.5.1-SNAPSHOT</acf.version>
