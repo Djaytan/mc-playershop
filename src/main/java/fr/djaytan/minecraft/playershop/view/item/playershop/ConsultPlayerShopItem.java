@@ -95,7 +95,7 @@ public class ConsultPlayerShopItem {
     return miniMessage
         .deserialize(
             resourceBundle.getString("playershop.playershop.list.shop.name"),
-            TagResolver.resolver(Placeholder.unparsed("diag_player_name", ownerName)))
+            TagResolver.resolver(Placeholder.unparsed("ps_player_name", ownerName)))
         .decoration(TextDecoration.ITALIC, false);
   }
 }

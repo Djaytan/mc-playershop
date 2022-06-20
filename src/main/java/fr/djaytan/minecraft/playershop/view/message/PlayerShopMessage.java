@@ -53,9 +53,9 @@ public class PlayerShopMessage {
         resourceBundle.getString("playershop.playershop.buy.success"),
         TagResolver.resolver(
             Placeholder.unparsed(
-                "diag_price", economyFormatter.format(economyResponse.getModifiedAmount())),
+                "ps_price", economyFormatter.format(economyResponse.getModifiedAmount())),
             Placeholder.unparsed(
-                "diag_new_balance", economyFormatter.format(economyResponse.getNewBalance()))));
+                "ps_new_balance", economyFormatter.format(economyResponse.getNewBalance()))));
   }
 
   public @NotNull Component teleportPointDefined(@NotNull LocationDto locationDto) {
@@ -63,21 +63,21 @@ public class PlayerShopMessage {
         resourceBundle.getString("playershop.playershop.config.teleportation.defined"),
         TagResolver.resolver(
             Placeholder.component(
-                "diag_teleport_point",
+                "ps_teleport_point",
                 miniMessage.deserialize(
                     resourceBundle.getString(
                         "playershop.playershop.config.teleportation.defined.location"),
                     TagResolver.resolver(
                         Placeholder.unparsed(
-                            "diag_location_x", String.format("%.2f", locationDto.getX())),
+                            "ps_location_x", String.format("%.2f", locationDto.getX())),
                         Placeholder.unparsed(
-                            "diag_location_y", String.format("%.2f", locationDto.getY())),
+                            "ps_location_y", String.format("%.2f", locationDto.getY())),
                         Placeholder.unparsed(
-                            "diag_location_z", String.format("%.2f", locationDto.getZ())),
+                            "ps_location_z", String.format("%.2f", locationDto.getZ())),
                         Placeholder.unparsed(
-                            "diag_location_yaw", String.format("%.2f", locationDto.getYaw())),
+                            "ps_location_yaw", String.format("%.2f", locationDto.getYaw())),
                         Placeholder.unparsed(
-                            "diag_location_pitch",
+                            "ps_location_pitch",
                             String.format("%.2f", locationDto.getPitch())))))));
   }
 
@@ -86,7 +86,7 @@ public class PlayerShopMessage {
         resourceBundle.getString("playershop.playershop.config.activation.toggled"),
         TagResolver.resolver(
             Placeholder.component(
-                "diag_activation_state",
+                "ps_activation_state",
                 miniMessage.deserialize(
                     resourceBundle.getString(
                         isPlayerShopActive
@@ -142,6 +142,6 @@ public class PlayerShopMessage {
   public @NotNull Component successTeleport(@NotNull String ownerName) {
     return miniMessage.deserialize(
         resourceBundle.getString("playershop.playershop.teleportation.success"),
-        TagResolver.resolver(Placeholder.unparsed("diag_owner_name", ownerName)));
+        TagResolver.resolver(Placeholder.unparsed("ps_owner_name", ownerName)));
   }
 }

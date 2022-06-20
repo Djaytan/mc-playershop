@@ -90,7 +90,7 @@ public class BuyPlayerShopItem {
                 resourceBundle.getString("playershop.playershop.buy.item.description"),
                 TagResolver.resolver(
                     Placeholder.unparsed(
-                        "diag_buy_price",
+                        "ps_buy_price",
                         economyFormatter.format(pluginConfig.getPlayerShop().getBuyCost()))))
             .decoration(TextDecoration.ITALIC, false),
         Component.empty(),
