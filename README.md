@@ -1,2 +1,2 @@
-# diagonia-playershop
-Playershop plugin of Diagonia server (Minecraft)
+# playershop
+Playershop plugin for Bukkit servers (Minecraft)
